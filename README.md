@@ -11,3 +11,5 @@ Features of smart timer
 * When the countdown reaches 00:00:00.000, it continues to countdown (negative) until the "Stop" is pressed.
 
 * This countdown timer is "smart" as it allows user to close the tab, reopen and would continue its previous state. E.g. while the countdown has started, refreshing the page would   just continue the count down.
+
+To launch smart-timer download and open index.html file in a browser.
