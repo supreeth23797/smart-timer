@@ -1,0 +1,50 @@
+Unit test cases:
+
+case 1: When contdown reaches 00:00:00.000 it must continue (negative)
+Result: PASS
+
+<-- Below are sub cases to when tab is refreshed or closed and reopened (site data is not deleted manually)-->
+
+case 2: When timer is set to 00:00:20.200 and not started, on reload after 10 seconds timer displays same 00:00:20:200
+Result: PASS
+
+case 3: When timer is counting down (currently 00:00:16.238), on reload after 4 seconds timer displays 00:00:12:238 and starts counting down without pause
+Result: PASS
+
+case 4: When timer is counting down (currently 00:00:16.238) with laps recorded, on reload after 4 seconds timer displays 00:00:12:238 and starts counting down without pause displaying laps record table with previously recorded laps entries
+with laps record table
+Result: PASS
+
+case 5: When timer is stopped at 00:00:10.335, on reload timer displays 00:00:10.335 with stopped state
+Result: PASS
+
+case 6: When timer is stopped at 00:00:10.335 with laps recorded, on reload timer displays 00:00:10.335 with stopped state
+displaying laps record table with previously recorded laps entries
+Result: PASS
+
+<-- Below are sub cases regarding laps entry table-->
+
+case 7: when space is pressed when timer is counting down, lap data to be added to table
+Result: PASS
+
+case 8: when space is pressed when timer is in stopped state, lap data should not be added
+Result: PASS
+
+case 9: when backspace is pressed when timer is in stopped state, no changes must happen
+Result: PASS
+
+case 10: when backspace is pressed when timer is counting down, if lap entry exists, merge current lap with previous lap
+Result: PASS
+
+case 11: when backspace is pressed when timer is counting down, if lap entry does not exist, no changes must happen
+Result: PASS
+
+<-- when -99:-59:-59.-999 is reached -->
+
+case 12: When timer reaches negative count down limit of -99:-59:-59.-999 (time given by user 00:00:10.000), timer must reset to 00:00:10.000
+Result: PASS
+
+
+
+
+
