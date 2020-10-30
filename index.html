@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color: rgb(37, 37, 37);">
+    <p class="timer">
+        <span class="timer holder"> <span class="timer holder hms" id="hour">00</span> <span class="timer holder tag">Hours</span> </span>
+        <span class="timer holder"> <span class="timer holder hms" id="min">00</span> <span class="timer holder tag">Minutes</span> </span>
+        <span class="timer holder"> <span class="timer holder hms" id="sec">00</span> <span class="timer holder tag">Seconds</span> </span>
+        <span class="timer holder"> <span class="timer holder ms" id="ms">000</span> <span class="timer holder tag">Milliseconds</span> </span>
+    </p>
+
+    <div class="progressBar" id="barContainer">
+        <div id="barEmpty">
+            <div id="barProgress"></div>
+        </div>
+    </div>
+    
+    <div class="btnsLayout">
+        <button class="button btn-set-time" id="btnSetTime" data-toggle="modal" 
+                data-target="#myModal">Edit Timer</button>
+        <button class="button btn-start-stop" id="btnStartStop">Start</button>
+        <button class="button btn-reset" id="btnReset" disabled="true">Reset</button>
+    </div>
+
+    <table id="lapsTable" style="display: none;">
+        <tr>
+            <th style="width: 10pt;">Lap</th>
+            <th>Start time</th>
+            <th>End time</th>
+            <th>Duration</th>
+        </tr>
+    </table>
+
+    <!-- Time picker Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background-color: rgb(224, 224, 224);">
+                
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit Timer</h4>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col">
+                                <h6>Hours</h6>
+                                <select class="form-control" id="hourSelector"></select>
+                            </div>
+                            <div class="col">
+                                <h6>Minutes</h6>
+                                <select class="form-control" id="minuteSelector"></select>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col">
+                                <h6>Seconds</h6>
+                                <select class="form-control" id="secondSelector"></select>
+                            </div>
+                            <div class="col">
+                                <h6>Milliseconds</h6>
+                                <select class="form-control" id="millisecondSelector"></select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button class="button btn-submit" id="submit" data-dismiss="modal">Start</button>
+                    <button class="button btn-close" id="close" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="jscript.js"></script>
+</body>
+</html>
