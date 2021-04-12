@@ -21,3 +21,4 @@ Features of smart timer
   Refer unit test cases for more info.
 
 To launch smart-timer download and open index.html file in a browser.
+
