@@ -22,3 +22,5 @@ Features of smart timer
 
 To launch smart-timer download and open index.html file in a browser.
 
+![IMG-20201030-WA0036](https://user-images.githubusercontent.com/37664479/115150062-68d74e00-a084-11eb-9bd8-c3626bc597a1.jpg)
+![IMG-20201030-WA0037](https://user-images.githubusercontent.com/37664479/115150076-78569700-a084-11eb-8443-e34ef3cfb468.jpg)
